@@ -16,10 +16,12 @@ jobs:
       output2: ${{ steps.step2.outputs.test }}
     steps:
       - id: step1
+        shell: bash
         run: |
           HELLO="hello"
           echo "test=$HELLO" >> $GITHUB_OUTPUT
       - id: step2
+        shell: bash
         run: echo "test=world" >> $GITHUB_OUTPUT
   job2:
     runs-on: ubuntu-latest
