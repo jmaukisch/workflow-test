@@ -25,3 +25,7 @@ jobs:
   call-workflow:
     needs: ['build']
     uses: ./.github/workflows/reusable-workflow.yml
+    
+  call-workflow-2:
+    needs: ['build']
+    uses: ./.github/workflows/reuse-2.yml    
